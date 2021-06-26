@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
 }
 
+apply plugin: 'com.google.gms.google-services'
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -32,6 +34,25 @@ android {
     }
     buildFeatures {
         viewBinding true
+    }
+    productFlavors {
+        flavorDimensions 'client'
+        bike {
+            dimension 'client'
+            applicationId 'br.com.douglasmotta.whitelabeltutorial.bike'
+        }
+        bikeAdmin {
+            dimension 'client'
+            applicationId 'br.com.douglasmotta.whitelabeltutorial.bikeadmin'
+        }
+        car {
+            dimension 'client'
+            applicationId 'br.com.douglasmotta.whitelabeltutorial.car'
+        }
+        carAdmin {
+            dimension 'client'
+            applicationId 'br.com.douglasmotta.whitelabeltutorial.caradmin'
+        }
     }
 }
 
