@@ -40,18 +40,22 @@ android {
         bike {
             dimension 'client'
             applicationId 'br.com.douglasmotta.whitelabeltutorial.bike'
+            resValue "string", "app_name", "Bike"
         }
         bikeAdmin {
             dimension 'client'
             applicationId 'br.com.douglasmotta.whitelabeltutorial.bikeadmin'
+            resValue "string", "app_name", "Bike Admin"
         }
         car {
             dimension 'client'
             applicationId 'br.com.douglasmotta.whitelabeltutorial.car'
+            resValue "string", "app_name", "Car"
         }
         carAdmin {
             dimension 'client'
             applicationId 'br.com.douglasmotta.whitelabeltutorial.caradmin'
+            resValue "string", "app_name", "Car Admin"
         }
     }
 }

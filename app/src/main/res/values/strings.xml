@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">White Label Tutorial</string>
-
     <!-- ProductsFragment -->
     <string name="products_screen_title">Products</string>
 </resources>
