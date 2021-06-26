@@ -1,0 +1,2 @@
+rootProject.name = "White Label Tutorial"
+include ':app'
