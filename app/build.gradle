@@ -41,21 +41,29 @@ android {
             dimension 'client'
             applicationId 'br.com.douglasmotta.whitelabeltutorial.bike'
             resValue "string", "app_name", "Bike"
+
+            buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"bike\""
         }
         bikeAdmin {
             dimension 'client'
             applicationId 'br.com.douglasmotta.whitelabeltutorial.bikeadmin'
             resValue "string", "app_name", "Bike Admin"
+
+            buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"bike\""
         }
         car {
             dimension 'client'
             applicationId 'br.com.douglasmotta.whitelabeltutorial.car'
             resValue "string", "app_name", "Car"
+
+            buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"car\""
         }
         carAdmin {
             dimension 'client'
             applicationId 'br.com.douglasmotta.whitelabeltutorial.caradmin'
             resValue "string", "app_name", "Car Admin"
+
+            buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"car\""
         }
     }
 }
