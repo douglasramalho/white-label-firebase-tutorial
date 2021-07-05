@@ -1,19 +1,21 @@
 package br.com.douglasmotta.whitelabeltutorial.data.repository
 
+import android.net.Uri
 import br.com.douglasmotta.whitelabeltutorial.BuildConfig
 import br.com.douglasmotta.whitelabeltutorial.domain.model.Product
 import br.com.douglasmotta.whitelabeltutorial.domain.repository.ProductRepository
-import br.com.douglasmotta.whitelabeltutorial.util.COLLECTION_PRODUCTS
-import br.com.douglasmotta.whitelabeltutorial.util.COLLECTION_ROOT
-import br.com.douglasmotta.whitelabeltutorial.util.DESCRIPTION_KEY
-import br.com.douglasmotta.whitelabeltutorial.util.PRICE_KEY
+import br.com.douglasmotta.whitelabeltutorial.util.*
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import java.util.*
 import kotlin.coroutines.suspendCoroutine
 
 class ProductRepositoryImpl : ProductRepository {
 
     private val documentReference = FirebaseFirestore.getInstance()
         .document("${COLLECTION_ROOT}/${BuildConfig.FIREBASE_FLAVOR_COOLECTION}")
+
+    private val storageReference = FirebaseStorage.getInstance().reference
 
     override suspend fun getProducts(): List<Product> {
         return suspendCoroutine { continuation ->
@@ -33,6 +35,23 @@ class ProductRepositoryImpl : ProductRepository {
             productsReference.get().addOnFailureListener {
                 continuation.resumeWith(Result.failure(it))
             }
+        }
+    }
+
+    override suspend fun uploadProductImage(imageUri: Uri): String {
+        return suspendCoroutine { continuation ->
+            val randomKey = UUID.randomUUID()
+            val childReference = storageReference.child(
+                "$STORAGE_IMAGES/${BuildConfig.FIREBASE_FLAVOR_COOLECTION}/$randomKey"
+            )
+
+            childReference.putFile(imageUri)
+                .addOnSuccessListener { taskSnapshot ->
+                    val path = taskSnapshot.metadata?.path ?: ""
+                    continuation.resumeWith(Result.success(path))
+                }.addOnFailureListener { exception ->
+                    continuation.resumeWith(Result.failure(exception))
+                }
         }
     }
 
