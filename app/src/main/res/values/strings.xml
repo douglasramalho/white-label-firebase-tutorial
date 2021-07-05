@@ -1,4 +1,11 @@
 <resources>
     <!-- ProductsFragment -->
     <string name="products_screen_title">Products</string>
+    <string name="products_fab_add_product">Add product</string>
+
+    <!-- AddProductFragment -->
+    <string name="add_product_screen_title">Add Product</string>
+    <string name="add_product_field_description_hint">Description</string>
+    <string name="add_product_field_price_hint">Price</string>
+    <string name="add_product_button_add_product">Add</string>
 </resources>

@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import br.com.douglasmotta.whitelabeltutorial.R
 import br.com.douglasmotta.whitelabeltutorial.databinding.FragmentProductsBinding
 
 class ProductsFragment : Fragment() {
@@ -18,6 +20,14 @@ class ProductsFragment : Fragment() {
     ): View {
         _binding = FragmentProductsBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.fabAdd.setOnClickListener {
+            findNavController().navigate(R.id.action_productsFragment_to_addProductFragment)
+        }
     }
 
     override fun onDestroyView() {
