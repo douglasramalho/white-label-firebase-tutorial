@@ -6,13 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import br.com.douglasmotta.whitelabeltutorial.databinding.FragmentAddProductBinding
 import br.com.douglasmotta.whitelabeltutorial.util.CurrencyTextWatcher
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.textfield.TextInputLayout
-import java.util.*
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AddProductFragment : BottomSheetDialogFragment() {
 
     private var _binding: FragmentAddProductBinding? = null
@@ -26,7 +29,7 @@ class AddProductFragment : BottomSheetDialogFragment() {
             binding.imageProduct.setImageURI(imageUri)
         }
 
-    private val viewModel by viewModels<AddProductViewModel>()
+    private val viewModel: AddProductViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,6 +59,10 @@ class AddProductFragment : BottomSheetDialogFragment() {
 
         viewModel.priceFieldErrorResId.observe(viewLifecycleOwner) { stringResId ->
             binding.inputLayoutPrice.setError(stringResId)
+        }
+
+        viewModel.productCreated.observe(viewLifecycleOwner) {
+            findNavController().popBackStack()
         }
     }
 

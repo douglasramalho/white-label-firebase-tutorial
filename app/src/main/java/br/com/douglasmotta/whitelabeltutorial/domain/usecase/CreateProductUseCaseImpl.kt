@@ -4,8 +4,9 @@ import android.net.Uri
 import br.com.douglasmotta.whitelabeltutorial.domain.model.Product
 import br.com.douglasmotta.whitelabeltutorial.domain.repository.ProductRepository
 import java.lang.Exception
+import javax.inject.Inject
 
-class CreateProductUseCaseImpl(
+class CreateProductUseCaseImpl @Inject constructor(
     private val uploadProductImageUseCase: UploadProductImageUseCase,
     private val productRepository: ProductRepository
 ) : CreateProductUserCase {

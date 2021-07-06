@@ -8,14 +8,18 @@ import br.com.douglasmotta.whitelabeltutorial.util.*
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import java.util.*
+import javax.inject.Inject
 import kotlin.coroutines.suspendCoroutine
 
-class ProductRepositoryImpl : ProductRepository {
+class ProductRepositoryImpl @Inject constructor(
+    firebaseFirestore: FirebaseFirestore,
+    firebaseStorage: FirebaseStorage
+) : ProductRepository {
 
-    private val documentReference = FirebaseFirestore.getInstance()
+    private val documentReference = firebaseFirestore
         .document("${COLLECTION_ROOT}/${BuildConfig.FIREBASE_FLAVOR_COOLECTION}")
 
-    private val storageReference = FirebaseStorage.getInstance().reference
+    private val storageReference = firebaseStorage.reference
 
     override suspend fun getProducts(): List<Product> {
         return suspendCoroutine { continuation ->
@@ -59,7 +63,8 @@ class ProductRepositoryImpl : ProductRepository {
         return suspendCoroutine { continuation ->
             val productToSave = hashMapOf(
                 DESCRIPTION_KEY to product.description,
-                PRICE_KEY to product.price
+                PRICE_KEY to product.price,
+                IMAGE_URL to product.imageUrl
             )
 
             documentReference
