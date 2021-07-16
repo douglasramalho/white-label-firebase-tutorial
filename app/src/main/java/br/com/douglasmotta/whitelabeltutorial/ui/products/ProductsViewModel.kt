@@ -1,5 +1,6 @@
 package br.com.douglasmotta.whitelabeltutorial.ui.products
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -23,7 +24,7 @@ class ProductsViewModel @Inject constructor(
             val products = getProductsUseCase()
             _productsData.value = products
         } catch (e: Exception) {
-            // Log
+            Log.d("ProductsViewModel", e.toString())
         }
     }
 }

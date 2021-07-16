@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.douglasmotta.whitelabeltutorial.databinding.ItemProductBinding
 import br.com.douglasmotta.whitelabeltutorial.domain.model.Product
 import br.com.douglasmotta.whitelabeltutorial.util.toCurrency
+import com.bumptech.glide.Glide
 
 class ProductsAdapter : ListAdapter<Product, ProductsAdapter.ProductsViewHolder>(
     DIFF_CALLBACK
@@ -27,6 +28,11 @@ class ProductsAdapter : ListAdapter<Product, ProductsAdapter.ProductsViewHolder>
 
         fun bind(product: Product) {
             itemBinding.run {
+                Glide.with(itemView)
+                    .load(product.imageUrl)
+                    .fitCenter()
+                    .into(itemBinding.imageProduct)
+
                 textDescription.text = product.description
                 textPrice.text = product.price.toCurrency()
             }

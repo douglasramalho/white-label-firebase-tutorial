@@ -5,8 +5,10 @@ import br.com.douglasmotta.whitelabeltutorial.BuildConfig
 import br.com.douglasmotta.whitelabeltutorial.domain.model.Product
 import br.com.douglasmotta.whitelabeltutorial.domain.repository.ProductRepository
 import br.com.douglasmotta.whitelabeltutorial.util.*
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
+import java.lang.reflect.Field
 import java.util.*
 import javax.inject.Inject
 import kotlin.coroutines.suspendCoroutine
@@ -51,27 +53,24 @@ class ProductRepositoryImpl @Inject constructor(
 
             childReference.putFile(imageUri)
                 .addOnSuccessListener { taskSnapshot ->
-                    val path = taskSnapshot.metadata?.path ?: ""
-                    continuation.resumeWith(Result.success(path))
+                    taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
+                        val path = uri.toString()
+                        continuation.resumeWith(Result.success(path))
+                    }
                 }.addOnFailureListener { exception ->
                     continuation.resumeWith(Result.failure(exception))
                 }
         }
     }
 
-    override suspend fun createProduct(product: Product) {
+    override suspend fun createProduct(product: Product): Product {
         return suspendCoroutine { continuation ->
-            val productToSave = hashMapOf(
-                DESCRIPTION_KEY to product.description,
-                PRICE_KEY to product.price,
-                IMAGE_URL to product.imageUrl
-            )
-
             documentReference
                 .collection(COLLECTION_PRODUCTS)
-                .add(productToSave)
+                .document(System.currentTimeMillis().toString())
+                .set(product)
                 .addOnSuccessListener {
-                    continuation.resumeWith(Result.success(Unit))
+                    continuation.resumeWith(Result.success(product))
                 }
                 .addOnFailureListener {
                     continuation.resumeWith(Result.failure(it))

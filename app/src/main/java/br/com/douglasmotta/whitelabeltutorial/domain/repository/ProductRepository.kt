@@ -9,5 +9,5 @@ interface ProductRepository {
 
     suspend fun uploadProductImage(imageUri: Uri): String
 
-    suspend fun createProduct(product: Product)
+    suspend fun createProduct(product: Product): Product
 }
