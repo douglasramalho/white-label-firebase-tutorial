@@ -51,6 +51,10 @@ class ProductsFragment : Fragment() {
     }
 
     private fun setListeners() {
+        binding.swipeProducts.setOnRefreshListener {
+            viewModel.getProducts()
+        }
+
         binding.fabAdd.setOnClickListener {
             findNavController().navigate(R.id.action_productsFragment_to_addProductFragment)
         }
@@ -85,7 +89,12 @@ class ProductsFragment : Fragment() {
 
     private fun observeVMEvents() {
         viewModel.productsData.observe(viewLifecycleOwner) { products ->
+            binding.swipeProducts.isRefreshing = false
             productsAdapter.submitList(products)
+        }
+
+        viewModel.addButtonVisibilityData.observe(viewLifecycleOwner) { addButtonVisibility ->
+            binding.fabAdd.visibility = addButtonVisibility
         }
     }
 
