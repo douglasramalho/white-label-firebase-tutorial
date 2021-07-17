@@ -38,34 +38,29 @@ android {
         viewBinding true
     }
     productFlavors {
-        flavorDimensions 'client'
+        flavorDimensions 'product', 'side'
         bike {
-            dimension 'client'
-            applicationId 'br.com.douglasmotta.whitelabeltutorial.bike'
-            resValue "string", "app_name", "Bike"
-
-            buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"bike\""
-        }
-        bikeAdmin {
-            dimension 'client'
-            applicationId 'br.com.douglasmotta.whitelabeltutorial.bikeadmin'
-            resValue "string", "app_name", "Bike Admin"
+            dimension 'product'
+            applicationIdSuffix ".bike"
+            manifestPlaceholders.appName = "Bike"
 
             buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"bike\""
         }
         car {
-            dimension 'client'
-            applicationId 'br.com.douglasmotta.whitelabeltutorial.car'
-            resValue "string", "app_name", "Car"
+            dimension 'product'
+            applicationIdSuffix ".car"
+            manifestPlaceholders.appName = "Car"
 
             buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"car\""
         }
-        carAdmin {
-            dimension 'client'
-            applicationId 'br.com.douglasmotta.whitelabeltutorial.caradmin'
-            resValue "string", "app_name", "Car Admin"
-
-            buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"car\""
+        client {
+            dimension 'side'
+            manifestPlaceholders.appNameSuffix = ""
+        }
+        admin {
+            dimension 'side'
+            applicationIdSuffix ".admin"
+            manifestPlaceholders.appNameSuffix = ".Admin"
         }
     }
 }

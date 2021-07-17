@@ -38,7 +38,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:570353608086:android:72642c7f3fddb472dde9b7",
         "android_client_info": {
-          "package_name": "br.com.douglasmotta.whitelabeltutorial.bikeadmin"
+          "package_name": "br.com.douglasmotta.whitelabeltutorial.bike.admin"
         }
       },
       "oauth_client": [
@@ -96,7 +96,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:570353608086:android:0d9ff51a8aae67ecdde9b7",
         "android_client_info": {
-          "package_name": "br.com.douglasmotta.whitelabeltutorial.caradmin"
+          "package_name": "br.com.douglasmotta.whitelabeltutorial.car.admin"
         }
       },
       "oauth_client": [
