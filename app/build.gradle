@@ -37,32 +37,6 @@ android {
     buildFeatures {
         viewBinding true
     }
-    productFlavors {
-        flavorDimensions 'product', 'side'
-        bike {
-            dimension 'product'
-            applicationIdSuffix ".bike"
-            manifestPlaceholders.appName = "Bike"
-
-            buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"bike\""
-        }
-        car {
-            dimension 'product'
-            applicationIdSuffix ".car"
-            manifestPlaceholders.appName = "Car"
-
-            buildConfigField "String", "FIREBASE_FLAVOR_COOLECTION", "\"car\""
-        }
-        client {
-            dimension 'side'
-            manifestPlaceholders.appNameSuffix = ""
-        }
-        admin {
-            dimension 'side'
-            applicationIdSuffix ".admin"
-            manifestPlaceholders.appNameSuffix = ".Admin"
-        }
-    }
 }
 
 dependencies {
@@ -109,5 +83,3 @@ kapt {
         option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
     }
 }
-
-apply plugin: 'com.google.gms.google-services'
