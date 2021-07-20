@@ -1,6 +1,6 @@
 # Vídeo 0
 ## Tarefas
-- [ ] Apresentar o conteúdo a ser ministrado e como o projeto a ser desenvolvido
+- [ ] Apresentar o conteúdo a ser ministrado e como o projeto vai ser desenvolvido
 
 # Vídeo 1
 ## Tarefas
