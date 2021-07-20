@@ -1,13 +1,22 @@
-# Video 1
-## Tasks
+# Vídeo 0
+## Tarefas
+- [ ] Apresentar o conteúdo a ser ministrado e como o projeto a ser desenvolvido
 
-- [ ] Configure the product flavors on the build.gradle file of the app module (bike, bikeAdmin, car, carAdmin)
-- [ ] Create folders for each flavor inside the src folder
-- [ ] Add launcher icon for each flavor (Image Asset)
-- [ ] Set up a firebase project with 4 apps for the 'White Label Tutorial' project and import the google-service.json file into the project, inside the app module. Set up the project with the firebase plugin.
+# Vídeo 1
+## Tarefas
 
-# Video 2
-## Tasks
+- [ ] Clonar o projeto do GitHub e passar uma visão geral da estrutura do projeto
+- [ ] Configurar os flavors e as dimensões de flavors no arquivo build.gradle do módulo app: Flavors => bike, car, client, admin - Dimensões => product, side
+- [ ] Criar as pastas dos flavors dentro da pasta src do módulo app
+- [ ] Criar os ícones de launcher correspondentes aos flavors usando o recurso do Android Studio chamado Image Asset
+
+# Vídeo 2
+## Tarefas
+
+- [ ] Configurar o projeto no Firebase com 4 aplicativos e importar o arquivo google-services.json para o projeto. Configurar o projeto com o plugin do Firebase.
+
+# Vídeo 3
+## Tarefas
 
 - [ ] Create the data and domain layers using packages:
 - data/repository
