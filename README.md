@@ -14,27 +14,3 @@
 ## Tarefas
 
 - [ ] Configurar o projeto no Firebase com 4 aplicativos e importar o arquivo google-services.json para o projeto. Configurar o projeto com o plugin do Firebase.
-
-# Vídeo 3
-## Tarefas
-
-- [ ] Create the data and domain layers using packages:
-- data/repository
-- domain/model
-- domain/repository
-- domain/usecase
-
-- [ ] Initial implementation of the models, use cases and repositories
-
-# Video 3
-## Tasks
-
-- [ ] Create the Constants.kt file in order to store the constants of the project
-- [ ] Add a buildConfigField on build.gradle, for each flavor, in order to identify the collection on Firestore
-- [ ] Implement the ProductRepository class in order to get and to create products and fetch/store them on Firestore
-
-# Video 4
-## Tasks
-
-- [ ] Add the recycler view component to the fragment_products.xml layout file
-- [ ] Implement the item layout for the recylcer view (create background drawable)
