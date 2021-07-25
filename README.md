@@ -14,3 +14,13 @@
 ## Tarefas
 
 - [ ] Configurar o projeto no Firebase com 4 aplicativos e importar o arquivo google-services.json para o projeto. Configurar o projeto com o plugin do Firebase.
+
+# Vídeo 3
+## Tarefas
+
+- [ ] Visão geral sobre a Clean Architecture
+- [ ] Criar as camadas de dados e domínio
+- domain/model/**
+- domain/usecase/**
+- data/**
+- [ ] Implementação inicial da classe modelo, casos de usos e repositórios (abstração)
