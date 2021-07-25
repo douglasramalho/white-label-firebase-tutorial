@@ -43,11 +43,15 @@ android {
             dimension 'product'
             applicationIdSuffix '.bike'
             manifestPlaceholders.appName = "Bike"
+
+            buildConfigField "String", "FIREBASE_FLAVOR_COLLECTION", "\"bike\""
         }
         car {
             dimension 'product'
             applicationIdSuffix '.car'
             manifestPlaceholders.appName = "Car"
+
+            buildConfigField "String", "FIREBASE_FLAVOR_COLLECTION", "\"car\""
         }
         client {
             dimension 'side'
