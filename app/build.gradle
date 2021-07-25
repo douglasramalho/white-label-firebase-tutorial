@@ -12,7 +12,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "br.com.douglasmotta.whitelabeltutorial"
+        applicationId "br.com.fulano.whitelabeltutorial"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -106,3 +106,5 @@ kapt {
         option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
     }
 }
+
+apply plugin: 'com.google.gms.google-services'
