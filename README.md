@@ -24,3 +24,8 @@
 - domain/usecase/**
 - data/**
 - [ ] Implementação inicial da classe modelo, casos de usos e repositórios (abstração)
+
+# Vídeo 4
+## Tarefas
+
+- [ ] Implementar a fonte de dados para cadastrar e consultar os produtos no Firebase
