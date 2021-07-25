@@ -34,3 +34,8 @@
 ## Tarefas
 
 - [ ] Implementar as duas últimas funções da fonte de dados do Firebase
+
+# Vídeo 6
+## Tarefas
+
+- [ ] Implementar todos os casos de uso da aplicação
