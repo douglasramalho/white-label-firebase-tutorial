@@ -78,3 +78,8 @@
 
 - [ ] Vincular o adapter com o recycler view de produtos
 - [ ] Implementar o view model para buscar os produtos
+
+# Vídeo 14
+## Tarefas
+
+- [ ] Permitir que apenas os aplicativos que são Admin's mostrem o botão de cadastrar produto
