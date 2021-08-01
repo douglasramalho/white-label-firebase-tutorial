@@ -17,7 +17,7 @@
     </fragment>
     <dialog
         android:id="@+id/addProductFragment"
-        android:name="br.com.douglasmotta.whitelabeltutorial.ui.products.addproduct.AddProductFragment"
+        android:name="br.com.douglasmotta.whitelabeltutorial.ui.addproduct.AddProductFragment"
         android:label="@string/add_product_screen_title"
         tools:layout="@layout/add_product_fragment" />
 </navigation>

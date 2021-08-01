@@ -1,11 +1,10 @@
-package br.com.douglasmotta.whitelabeltutorial.ui.products.addproduct
+package br.com.douglasmotta.whitelabeltutorial.ui.addproduct
 
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.viewModels
 import br.com.douglasmotta.whitelabeltutorial.databinding.AddProductFragmentBinding

@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/drawable/background_product_image.xml" value="0.4066666666666667" />
         <entry key="app/src/main/res/drawable/background_product_image_error.xml" value="0.4066666666666667" />
         <entry key="app/src/main/res/layout/add_product_fragment.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_products.xml" value="0.396875" />
+        <entry key="app/src/main/res/layout/item_product.xml" value="0.396875" />
       </map>
     </option>
   </component>
