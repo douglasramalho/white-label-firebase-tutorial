@@ -72,3 +72,9 @@
 
 - [ ] Implementar o layout da tela de listagem de produtos
 - [ ] Implementar o adapter da listagem de produtos
+
+# Vídeo 13
+## Tarefas
+
+- [ ] Vincular o adapter com o recycler view de produtos
+- [ ] Implementar o view model para buscar os produtos
