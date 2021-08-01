@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/background_product_image.xml" value="0.4066666666666667" />
+        <entry key="app/src/main/res/drawable/background_product_image_error.xml" value="0.4066666666666667" />
         <entry key="app/src/main/res/layout/add_product_fragment.xml" value="0.5" />
       </map>
     </option>
