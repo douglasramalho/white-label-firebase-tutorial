@@ -50,3 +50,8 @@
 
 - [ ] Implementar os listeners do formulários
 - [ ] Obter o imageUri de uma foto usando ActvityResultContracts.GetContents()
+
+# Vídeo 9
+## Tarefas
+
+- [ ] Implementar o view model da tela Adicionar Produto
