@@ -44,3 +44,9 @@
 ## Tarefas
 
 - [ ] Implementar o layout da tela adicionar produto
+
+# Vídeo 8
+## Tarefas
+
+- [ ] Implementar os listeners do formulários
+- [ ] Obter o imageUri de uma foto usando ActvityResultContracts.GetContents()
