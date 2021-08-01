@@ -55,3 +55,8 @@
 ## Tarefas
 
 - [ ] Implementar o view model da tela Adicionar Produto
+
+# Vídeo 10
+## Tarefas
+
+- [ ] Configurar a biblioteca de injeção de dependência no Projeto DaggerHilter)
