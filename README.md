@@ -59,4 +59,16 @@
 # Vídeo 10
 ## Tarefas
 
-- [ ] Configurar a biblioteca de injeção de dependência no Projeto DaggerHilter)
+- [ ] Configurar a biblioteca de injeção de dependência no Projeto (DaggerHilter)
+
+# Vídeo 11
+## Tarefas
+
+- [ ] Iniciar os serviços do Firebase (Firestore e Storage)
+- [ ] Testar o cadastro de produtos pelo aplicativo
+
+# Vídeo 12
+## Tarefas
+
+- [ ] Implementar o layout da tela de listagem de produtos
+- [ ] Implementar o adapter da listagem de produtos
