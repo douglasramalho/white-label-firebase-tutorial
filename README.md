@@ -83,3 +83,9 @@
 ## Tarefas
 
 - [ ] Permitir que apenas os aplicativos que são Admin's mostrem o botão de cadastrar produto
+
+# Vídeo 15
+## Tarefas
+
+- [ ] Navegar para a tela de cadastro
+- [ ] Atualizar listagem de produtos ao adicionar um novo produto usando o navBackStackEntry
