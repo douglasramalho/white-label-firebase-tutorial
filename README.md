@@ -93,4 +93,4 @@
 # Vídeo 16
 ## Tarefas
 
-- [ ] Swipe to refresh - atualização da listagem de produção
+- [ ] Swipe to refresh - atualização da listagem de produtos
