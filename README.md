@@ -99,3 +99,8 @@
 ## Tarefas
 
 - [ ] Definir e utilizar a paleta de cores do projeto Carro
+
+# Vídeo 18
+## Tarefas
+
+- [ ] Definir e utilizar a paleta de cores do projeto Bike
