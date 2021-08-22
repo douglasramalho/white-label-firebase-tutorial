@@ -89,3 +89,8 @@
 
 - [ ] Navegar para a tela de cadastro
 - [ ] Atualizar listagem de produtos ao adicionar um novo produto usando o navBackStackEntry
+
+# Vídeo 16
+## Tarefas
+
+- [ ] Swipe to refresh - atualização da listagem de produção
