@@ -94,3 +94,8 @@
 ## Tarefas
 
 - [ ] Swipe to refresh - atualização da listagem de produtos
+
+# Vídeo 17
+## Tarefas
+
+- [ ] Definir e utilizar a paleta de cores do projeto Carro
