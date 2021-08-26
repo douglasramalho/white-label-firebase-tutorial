@@ -18,23 +18,89 @@
 # Vídeo 3
 ## Tarefas
 
-- [ ] Create the data and domain layers using packages:
-- data/repository
-- domain/model
-- domain/repository
-- domain/usecase
+- [ ] Visão geral sobre a Clean Architecture
+- [ ] Criar as camadas de dados e domínio
+- domain/model/**
+- domain/usecase/**
+- data/**
+- [ ] Implementação inicial da classe modelo, casos de usos e repositórios (abstração)
 
-- [ ] Initial implementation of the models, use cases and repositories
+# Vídeo 4
+## Tarefas
 
-# Video 3
-## Tasks
+- [ ] Implementar a fonte de dados para cadastrar e consultar os produtos no Firebase
 
-- [ ] Create the Constants.kt file in order to store the constants of the project
-- [ ] Add a buildConfigField on build.gradle, for each flavor, in order to identify the collection on Firestore
-- [ ] Implement the ProductRepository class in order to get and to create products and fetch/store them on Firestore
+# Vídeo 5
+## Tarefas
 
-# Video 4
-## Tasks
+- [ ] Implementar as duas últimas funções da fonte de dados do Firebase
 
-- [ ] Add the recycler view component to the fragment_products.xml layout file
-- [ ] Implement the item layout for the recylcer view (create background drawable)
+# Vídeo 6
+## Tarefas
+
+- [ ] Implementar todos os casos de uso da aplicação
+
+# Vídeo 7
+## Tarefas
+
+- [ ] Implementar o layout da tela adicionar produto
+
+# Vídeo 8
+## Tarefas
+
+- [ ] Implementar os listeners do formulários
+- [ ] Obter o imageUri de uma foto usando ActvityResultContracts.GetContents()
+
+# Vídeo 9
+## Tarefas
+
+- [ ] Implementar o view model da tela Adicionar Produto
+
+# Vídeo 10
+## Tarefas
+
+- [ ] Configurar a biblioteca de injeção de dependência no Projeto (DaggerHilter)
+
+# Vídeo 11
+## Tarefas
+
+- [ ] Iniciar os serviços do Firebase (Firestore e Storage)
+- [ ] Testar o cadastro de produtos pelo aplicativo
+
+# Vídeo 12
+## Tarefas
+
+- [ ] Implementar o layout da tela de listagem de produtos
+- [ ] Implementar o adapter da listagem de produtos
+
+# Vídeo 13
+## Tarefas
+
+- [ ] Vincular o adapter com o recycler view de produtos
+- [ ] Implementar o view model para buscar os produtos
+
+# Vídeo 14
+## Tarefas
+
+- [ ] Permitir que apenas os aplicativos que são Admin's mostrem o botão de cadastrar produto
+
+# Vídeo 15
+## Tarefas
+
+- [ ] Navegar para a tela de cadastro
+- [ ] Atualizar listagem de produtos ao adicionar um novo produto usando o navBackStackEntry
+
+# Vídeo 16
+## Tarefas
+
+- [ ] Swipe to refresh - atualização da listagem de produtos
+
+# Vídeo 17
+## Tarefas
+
+- [ ] Definir e utilizar a paleta de cores do projeto Carro
+
+# Vídeo 18
+## Tarefas
+
+- [ ] Definir e utilizar a paleta de cores do projeto Bike
